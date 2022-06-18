@@ -6,7 +6,8 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class selenide1test {
+
+public class Selenide1test {
     static void beforeAll() {
         Configuration.baseUrl = "https://github.com/";
         Configuration.browserSize = "1920x1080";
@@ -21,6 +22,7 @@ public class selenide1test {
         $(By.id("wiki-tab")).click();
 // Убедитесь, что в списке страниц (Pages) есть страница SoftAssertions
 // - Откройте страницу SoftAssertions
+        $("#wiki-pages-filter").sendKeys("soft");
         $(byText("SoftAssertions")).click();
 // проверьте что внутри есть пример кода для JUnit5
         $("#user-content-3-using-junit5-extend-test-class").ancestor("h4")
