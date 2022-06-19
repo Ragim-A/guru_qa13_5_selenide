@@ -1,4 +1,5 @@
 import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -8,6 +9,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 
 public class Selenide1test {
+    @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://github.com/";
         Configuration.browserSize = "1920x1080";
